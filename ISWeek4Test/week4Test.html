@@ -4,51 +4,121 @@
 
 
 	<title>
-		IS week4 test
+		IS week4 test1
 	</title>
 
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="main2.css">
 
-<!-- test -->
 </head>
 <body style="background-image:url('./img/Merge1.jpg'); background-size: 100%; background-repeat: no-repeat; margin:0 auto;">
+	
+	<audio id="maggie">
+  <source src="./audio/maggie.mp3" type="audio/mpeg">
+   </audio>
 
-<!-- The nurse on the left -->
-<div class = "narrationObjects" style="border: white 3px solid; width: 180px; height: 375px; ">
-<p>Nurse</p>
-</div>
+   <audio id="bed">
+  <source src="./audio/bed.mp3" type="audio/mpeg">
+   </audio>
 
-<div class = "narrationObjects" style="  width: 50px; height: 375px; ">
-</div>
+   <audio id="blueDevice">
+  <source src="./audio/blueDevice.mp3" type="audio/mpeg">
+   </audio>
 
-<!-- the blue machine that the nurse is operating -->
-<div class = "narrationObjects" style="border: white 3px solid; width: 180px; height: 200px;" > 
-<p >Device</p>
- </div>
+   <audio id="pillow">
+  <source src="./audio/pillow.mp3" type="audio/mpeg">
+   </audio>
 
+   <audio id="youngNurse">
+  <source src="./audio/youngNurse.mp3" type="audio/mpeg">
+   </audio>
 
-
- <div class = "narrationObjects" style="border: white 3px solid; width: 300px; height: 120px;" > 
-<p >Pillow</p>
- </div>
-
-
-
-
- <div class = "narrationObjects" style="border: white 3px solid; width: 350px; height: 255px;" > 
-<p >Maggie</p>
- </div>
-
-  <div class = "narrationObjects" style="border: white 3px solid; width:100px; height: 355px; margin-top: -100px;" > 
-<p >Bed</p>
- </div>
-
- <div class = "narrationObjects" style="border: white 3px solid; width:85px; height: 305px; margin-top: -50px;" > 
-<p >Nurse</p>
- </div>
+   <audio id="oldNurse">
+  <source src="./audio/oldNurse.mp3" type="audio/mpeg">
+   </audio>
 
 
 
+
+	<!-- The nurse on the left -->
+	<div class = "narrationObjects" style="border: white 3px solid; ">
+		<button onclick="playAudioYoungNurse()" style="width: 180px; height: 375px;">Nurse</button>
+	</div>
+
+	<div class = "narrationObjects" style="width: 50px; height: 375px; ">
+	</div>
+
+	<!-- the blue machine that the nurse is operating -->
+	<div class = "narrationObjects" style="border: white 3px solid;  " > 
+		<button onclick="playAudioBlueDevice()" style="width: 180px; height: 200px;">Device</button>
+	</div>
+
+	<!-- the pillow -->
+	<div class = "narrationObjects" style="border: white 3px solid; ;" > 
+		<button onclick="playAudioPillow()" style="width: 300px; height: 120px">Pillow</button>
+	</div>
+
+	<!-- Maggie -->
+	<div class = "narrationObjects" style="border: white 3px solid; " > 
+		<button onclick="playAudio()" type="button" style="width: 350px; height: 255px;">Maggie</button>
+	</div>
+
+	<!-- the bed -->
+	<div class = "narrationObjects" style="border: white 3px solid;  margin-top: -100px;" > 
+		<button onclick="playAudioBed()" style="width:100px; height: 355px;">Bed</button>
+	</div>
+
+	<!-- The nurse on the right -->
+	<div class = "narrationObjects" style="border: white 3px solid;  margin-top: -50px;" > 
+		<button onclick="playAudioOldNurse()" style="width:85px; height: 305px;">Nurse</button>
+	</div>
+
+	<!-- Back -->
+	<a href="*.html"><div class = "narrationObjects" style="margin-top: 10px; "> 
+		<p style="padding-right: 930px; height: 50px;color: blue;"> </p>
+	</div>
+	</a>
+
+	<audio controls >
+  <source src="./audio/caption.m4a" type="audio/mpeg">
+   </audio>
+   <p>The original AD caption</p>
+
+
+<script>
+var maggieDes = document.getElementById("maggie"); 
+var bedDes = document.getElementById("bed"); 
+var pillowDes = document.getElementById("pillow"); 
+var blueDeviceDes = document.getElementById("blueDevice"); 
+var youngNurseDes = document.getElementById("youngNurse"); 
+var oldNurseDes = document.getElementById("oldNurse"); 
+
+function playAudioMaggie() { 
+  maggieDes.play(); 
+} 
+
+function playAudioBed() { 
+  bedDes.play(); 
+} 
+
+function playAudioPillow() { 
+  pillowDes.play(); 
+} 
+
+function playAudioBlueDevice() { 
+  blueDeviceDes.play(); 
+} 
+
+function playAudioYoungNurse() { 
+  youngNurseDes.play(); 
+} 
+
+function playAudioOldNurse() { 
+  oldNurseDes.play(); 
+} 
+
+
+
+</script>
 
 
 

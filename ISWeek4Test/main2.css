@@ -11,13 +11,29 @@
 	margin:0;
 }
 
-.narrationObjects a {
+.narrationObjects button {
 	font-family: arial;
 	font-size: 18px;
 	color: white;
 	margin:0;
 }
 
+.narrationObjects a {
+	font-family: arial;
+	font-size: 18px;
+	color: white;
+	margin:0;
+	text-decoration: none;
+}
+
 p{
 	margin:0;
+}
+
+.controls {
+	color: blue;
+	margin: 0;
+	float: left;
+	font-family: arial;
+	font-size: 18px;
 }
