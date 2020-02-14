@@ -94,28 +94,55 @@ var youngNurseDes = document.getElementById("youngNurse");
 var oldNurseDes = document.getElementById("oldNurse"); 
 
 function playAudioMaggie() { 
+	pauseAll();
   maggieDes.play(); 
 } 
 
 function playAudioBed() { 
+	pauseAll();
   bedDes.play(); 
 } 
 
 function playAudioPillow() { 
+	pauseAll();
   pillowDes.play(); 
 } 
 
 function playAudioBlueDevice() { 
+	pauseAll();
   blueDeviceDes.play(); 
 } 
 
 function playAudioYoungNurse() { 
+	pauseAll();
   youngNurseDes.play(); 
 } 
 
 function playAudioOldNurse() { 
+	pauseAll();
   oldNurseDes.play(); 
 } 
+
+function pauseAll(){
+	maggieDes.pause();
+	maggieDes.currentTime = 0;
+
+	youngNurseDes.pause();
+	youngNurseDes.currentTime = 0;
+
+	oldNurse.pause();
+	oldNurseDes.currentTime = 0;
+
+	pillowDes.pause();
+	pillowDes.currentTime = 0;
+
+	blueDeviceDes.pause();
+	blueDeviceDes.currentTime = 0;
+
+	bedDes.pause();
+	bedDes.currentTime = 0;
+
+}
 
 
 

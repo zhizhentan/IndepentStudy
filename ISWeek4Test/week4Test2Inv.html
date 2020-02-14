@@ -4,13 +4,13 @@
 
 
 	<title>
-		IS W4T1(B)
+		IS W4T2(B)
 	</title>
 
 	<link rel="stylesheet" type="text/css" href="main2.css">
 
 </head>
-<body style=" background-size: 100%;  margin:0 auto;">
+<body style="margin:0 auto;">
 	
 	<audio id="maggie">
   <source src="./audio/maggie.mp3" type="audio/mpeg">
@@ -37,11 +37,9 @@
    </audio>
 
 
-
-
 	<!-- The nurse on the left -->
 	<div class = "narrationObjects" style="border: white 3px solid; ">
-		<div onclick="playAudioYoungNurse()" style="border: none; background-color:white; width: 180px; height: 375px;">Nurse</div>
+		<div onclick="audioYoungNurse()" style="width: 180px; height: 375px;">Nurse</div>
 	</div>
 
 	<div class = "narrationObjects" style="width: 50px; height: 375px; ">
@@ -49,27 +47,27 @@
 
 	<!-- the blue machine that the nurse is operating -->
 	<div class = "narrationObjects" style="border: white 3px solid;  " > 
-		<div onclick="playAudioBlueDevice()" style="border: none; background-color:white; width: 180px; height: 200px;">Device</div>
+		<div onclick="audioBlueDevice()" style="width: 180px; height: 200px;">Device</div>
 	</div>
 
 	<!-- the pillow -->
 	<div class = "narrationObjects" style="border: white 3px solid; ;" > 
-		<div onclick="playAudioPillow()" style="border: none; background-color:white; width: 300px; height: 120px">Pillow</div>
+		<div onclick="audioPillow()" style="width: 300px; height: 120px">Pillow</div>
 	</div>
 
 	<!-- Maggie -->
 	<div class = "narrationObjects" style="border: white 3px solid; " > 
-		<div onclick="playAudioMaggie()" type="div" style="border: none; background-color:white; width: 350px; height: 255px;">Maggie</div>
+		<div onclick="audioMaggie()" type="div" style="width: 350px; height: 255px;">Maggie</div>
 	</div>
 
 	<!-- the bed -->
 	<div class = "narrationObjects" style="border: white 3px solid;  margin-top: -100px;" > 
-		<div onclick="playAudioBed()" style="border: none; background-color:white; width:100px; height: 355px;">Bed</div>
+		<div onclick="audioBed()" style="width:100px; height: 355px;">Bed</div>
 	</div>
 
 	<!-- The nurse on the right -->
 	<div class = "narrationObjects" style="border: white 3px solid;  margin-top: -50px;" > 
-		<div onclick="playAudioOldNurse()" style="border: none; background-color:white; width:85px; height: 305px;">Nurse</div>
+		<div onclick="audioOldNurse()" style="width:85px; height: 305px;">Nurse</div>
 	</div>
 
 	<!-- Back -->
@@ -77,9 +75,8 @@
 		<p style="padding-right: 930px; height: 50px;color: blue;"> </p>
 	</div>
 	</a>
-
-	<div class = "narrationObjects"> 
-		<audio controls >
+<div class = "narrationObjects" >
+	<audio controls id="caption">
   <source src="./audio/caption.mp3" type="audio/mpeg">
    </audio>
    <p>The original AD caption</p>
@@ -93,38 +90,96 @@ var pillowDes = document.getElementById("pillow");
 var blueDeviceDes = document.getElementById("blueDevice"); 
 var youngNurseDes = document.getElementById("youngNurse"); 
 var oldNurseDes = document.getElementById("oldNurse"); 
+var captionDes = document.getElementById("caption")
 
-function playAudioMaggie() { 
-	pauseAll()
+var countMaggie = 1;
+var countBed = 1;
+var countPillow = 1;
+var countBlueDevice = 1;
+var countYoungNurse = 1;
+var countOldNurse = 1;
+
+
+function audioMaggie() { 
+	if (countMaggie == 1){
+		pauseAll()
   maggieDes.play(); 
-} 
+  pauseAudioCaption(); 
+  countMaggie = countMaggie*(-1);
+}else{
+	pauseAll();
+	playAudioCaption();
+	countMaggie = countMaggie*(-1);
+}
+}	
 
-function playAudioBed() { 
-	pauseAll()
+function audioBed() { 
+	if (countBed == 1){
+		pauseAll()
   bedDes.play(); 
-} 
+  pauseAudioCaption(); 
+  countBed = countBed*(-1);
+}else{
+	pauseAll();
+	playAudioCaption();
+	countBed = countBed*(-1);
+}
+}	  
 
-function playAudioPillow() { 
-	pauseAll()
+function audioPillow() { 
+	if (countPillow == 1){
+		pauseAll()
   pillowDes.play(); 
-} 
+  pauseAudioCaption(); 
+  countPillow = countPillow*(-1);
+}else{
+	pauseAll();
+	playAudioCaption();
+	countPillow = countPillow*(-1);
+}
+}	 
 
-function playAudioBlueDevice() { 
-	pauseAll()
+
+function audioBlueDevice() { 
+	if (countBlueDevice == 1){
+		pauseAll()
   blueDeviceDes.play(); 
-} 
+  pauseAudioCaption(); 
+  countBlueDevice = countBlueDevice*(-1);
+}else{
+	pauseAll();
+	playAudioCaption();
+	countBlueDevice = countBlueDevice*(-1);
+}
+}	 
 
-function playAudioYoungNurse() { 
-	pauseAll()
+function audioYoungNurse() { 
+	if (countYoungNurse == 1){
+		pauseAll()
   youngNurseDes.play(); 
-} 
+  pauseAudioCaption(); 
+  countYoungNurse = countYoungNurse*(-1);
+}else{
+	pauseAll();
+	playAudioCaption();
+	countYoungNurse = countYoungNurse*(-1);
+}
+}	 
 
-function playAudioOldNurse() { 
-	pauseAll()
+function audioOldNurse() { 
+	if (countOldNurse == 1){
+		pauseAll()
   oldNurseDes.play(); 
-} 
+  pauseAudioCaption(); 
+  countOldNurse = countOldNurse*(-1);
+}else{
+	pauseAll();
+	playAudioCaption();
+	countOldNurse = countOldNurse*(-1);
+}
+}
 
-
+// pause and reset all audio except the caption
 function pauseAll(){
 	maggieDes.pause();
 	maggieDes.currentTime = 0;
@@ -145,6 +200,17 @@ function pauseAll(){
 	bedDes.currentTime = 0;
 
 }
+
+// pause the caption
+function pauseAudioCaption(){
+	captionDes.pause();
+}
+
+function playAudioCaption(){
+	captionDes.play();
+}
+
+
 
 
 </script>
