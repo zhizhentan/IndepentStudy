@@ -1,0 +1,17 @@
+Bed
+The handle of the hospital bed is strong, with the control panel on the side.
+
+BlueDevice
+A blue desk phone size device with a digit pad. The screen is shining green.
+
+Maggie
+Maggie seems painful with her face sweated. Her hand is grasping handles on both sides of the bed firmly. 
+
+oldNurse
+An old white female nurse is encouraging Maggie. Her gloves have a lot of stain of blood.
+
+Pillow
+The white soft pillow is squeezed firmly.
+
+youngNurse
+A young black female nurse with a stethoscope hung on her neck is operating a device by the bed carefully.

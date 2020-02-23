@@ -4,7 +4,7 @@
 
 
 	<title>
-		IS W4T3
+		IS W4T3 Blindfolded
 	</title>
 
 	<link rel="stylesheet" type="text/css" href="main2.css">
@@ -93,35 +93,133 @@
 								var youngNurseDes = document.getElementById("youngNurse"); 
 								var oldNurseDes = document.getElementById("oldNurse"); 
 
+								var countMaggie = 1;
+								var countBed = 1;
+								var countPillow = 1;
+								var countBlueDevice = 1;
+								var countYoungNurse = 1;
+								var countOldNurse = 1;
+
+
 								function playAudioMaggie() { 
-									pauseAll();
-									maggieDes.play(); 
-								} 
+									if (countMaggie == 1){
+										pauseAll()
+										maggieDes.play(); 
+										
+										countMaggie = -1;
+										countBed = 1;
+										countPillow = 1;
+										countBlueDevice = 1;
+										countYoungNurse = 1;
+										countOldNurse = 1;
+
+									}else{
+										pauseAll();
+										
+										countMaggie = 1;
+									}
+								}	
 
 								function playAudioBed() { 
-									pauseAll();
-									bedDes.play(); 
-								} 
+									if (countBed == 1){
+										pauseAll()
+										bedDes.play(); 
+
+										countBed = -1;
+
+										countMaggie = 1;
+										countPillow = 1;
+										countBlueDevice = 1;
+										countYoungNurse = 1;
+										countOldNurse = 1;
+									}else{
+										pauseAll();
+
+										countBed = 1;
+									}
+								}	  
+
 
 								function playAudioPillow() { 
-									pauseAll();
-									pillowDes.play(); 
-								} 
+									if (countPillow == 1){
+										pauseAll()
+										pillowDes.play(); 
+										
+										countPillow = -1;
+
+										countBed = 1;
+										countMaggie = 1;
+										countBlueDevice = 1;
+										countYoungNurse = 1;
+										countOldNurse = 1;
+
+
+									}else{
+										pauseAll();
+										
+										countPillow = 1;
+									}
+								}	 
+
 
 								function playAudioBlueDevice() { 
-									pauseAll();
-									blueDeviceDes.play(); 
-								} 
+									if (countBlueDevice == 1){
+										pauseAll()
+										blueDeviceDes.play(); 
+
+										countBlueDevice = -1;
+
+										countBed = 1;
+										countPillow = 1;
+										countMaggie = 1;
+										countYoungNurse = 1;
+										countOldNurse = 1;
+									}else{
+										pauseAll();
+
+										countBlueDevice = 1;
+									}
+								}	 
 
 								function playAudioYoungNurse() { 
-									pauseAll();
-									youngNurseDes.play(); 
-								} 
+									if (countYoungNurse == 1){
+										pauseAll()
+										youngNurseDes.play(); 
+
+										countYoungNurse = -1;
+
+										countBed = 1;
+										countPillow = 1;
+										countBlueDevice = 1;
+										countMaggie = 1;
+										countOldNurse = 1;
+
+									}else{
+										pauseAll();
+
+										countYoungNurse = 1;
+									}
+								}	 
+
 
 								function playAudioOldNurse() { 
-									pauseAll();
-									oldNurseDes.play(); 
-								} 
+									if (countOldNurse == 1){
+										pauseAll()
+										oldNurseDes.play(); 
+										
+										countOldNurse = -1;
+
+										countBed = 1;
+										countPillow = 1;
+										countBlueDevice = 1;
+										countYoungNurse = 1;
+										countMaggie = 1;
+									}else{
+										pauseAll();
+										
+										countOldNurse = 1;
+									}
+								}
 
 								function pauseAll(){
 									maggieDes.pause();
